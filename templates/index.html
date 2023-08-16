@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/main.css') }}">
+  </head>
+  <style>
+    .table-wrapper {
+      width: 100%;
+      /* max-width: 500px; */
+      overflow-x: auto;
+    }
+  </style>
+  <body>
+    <h1>EPL Table</h1>
+    <div class="table-wrapper">
+      {% for table in tables %}
+                  {{ table|safe }}
+      {% endfor %}
+    </div>
+  </body>
+</html>

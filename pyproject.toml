@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "epl-pool"
+version = "0.1.0"
+description = ""
+authors = ["thayer6 <casey.thayer6@gmail.com>"]
+readme = "README.md"
+packages = [{include = "epl_pool"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "^2.3.2"
+pandas = "^2.0.3"
+lxml = "^4.9.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
