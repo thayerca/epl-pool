@@ -41,12 +41,22 @@ final_table = merged_table.drop(
     ]
 )
 
+owner_table = final_table.groupby(["Owner"]).Pts.sum().sort_values(ascending=False).reset_index()
+
 @app.route('/', methods = ("POST", "GET"))
 def html_table():
    return render_template(
            'index.html',
-            tables=[final_table.to_html(
-            classes="table",
-            index=False,
-            header="true")]
+            tables=[
+                final_table.to_html(
+                    classes="table",
+                    index=False,
+                    header="true"
+                ),
+                owner_table.to_html(
+                    classes="table",
+                    index=False,
+                    header="true"
+                ),
+            ]
         )
