@@ -31,22 +31,19 @@ owner_team_data = {
     "Owner": [val for val in owner_teams.values()]
 }
 
-owner_table = pd.DataFrame(data=owner_team_data)
-
-table_df = pd.read_html("https://fbref.com/en/comps/9/Premier-League-Stats")[0]
-merged_table = pd.merge(table_df, owner_table, on="Squad")
-final_table = merged_table.drop(
-    columns=[
-        "Last 5", "Attendance", "Top Team Scorer", "Goalkeeper", "Notes"
-    ]
-)
-
-owner_table = final_table.groupby(["Owner"]).Pts.sum().sort_values(ascending=False).reset_index()
-
 @app.route('/', methods = ("POST", "GET"))
 def html_table():
-   return render_template(
-           'index.html',
+    owner_table = pd.DataFrame(data=owner_team_data)
+    table_df = pd.read_html("https://fbref.com/en/comps/9/Premier-League-Stats")[0]
+    merged_table = pd.merge(table_df, owner_table, on="Squad")
+    final_table = merged_table.drop(
+        columns=[
+            "Last 5", "Attendance", "Top Team Scorer", "Goalkeeper", "Notes"
+        ]
+    )
+    owner_table = final_table.groupby(["Owner"]).Pts.sum().sort_values(ascending=False).reset_index()
+    return render_template(
+            'index.html',
             tables=[
                 final_table.to_html(
                     classes="table",
@@ -59,4 +56,4 @@ def html_table():
                     header="true"
                 ),
             ]
-        )
+    )
