@@ -17,7 +17,7 @@ owner_teams = {
     "Liverpool": "Neo ⭐️⭐️",
     "Luton Town": "CB",
     "Manchester City": "Jason ⭐️",
-    "Manchester United": "Megan ⭐️",
+    "Manchester Utd": "Megan ⭐️",
     "Newcastle Utd": "Neo ⭐️⭐️",
     "Nott'ham Forest": "Neo ⭐️⭐️",
     "Sheffield Utd": "Casey",
