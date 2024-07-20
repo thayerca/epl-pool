@@ -1,5 +1,5 @@
-from flask import Flask, render_template
 import pandas as pd
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -36,10 +36,12 @@ def html_table():
     owner_table = pd.DataFrame(data=owner_team_data)
     table_df = pd.read_html("https://fbref.com/en/comps/9/Premier-League-Stats")[0]
     merged_table = pd.merge(table_df, owner_table, on="Squad")
+    extra_columns = [
+        "Last 5", "Attendance", "Top Team Scorer", "Goalkeeper", "Notes"
+    ]
+    columns_to_drop = [col for col in extra_columns if col in merged_table.columns]
     final_table = merged_table.drop(
-        columns=[
-            "Last 5", "Attendance", "Top Team Scorer", "Goalkeeper", "Notes"
-        ]
+        columns=columns_to_drop
     )
     owner_table = final_table.groupby(["Owner"]).Pts.sum().sort_values(ascending=False).reset_index()
     return render_template(

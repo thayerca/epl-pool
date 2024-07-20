@@ -1,10 +1,9 @@
 [tool.poetry]
 name = "epl-pool"
 version = "0.1.0"
-description = ""
+description = "EPL pool Flask application"
 authors = ["thayer6 <casey.thayer6@gmail.com>"]
 readme = "README.md"
-packages = [{include = "epl_pool"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
