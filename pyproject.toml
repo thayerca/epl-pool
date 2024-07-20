@@ -4,6 +4,7 @@ version = "0.1.0"
 description = "EPL pool Flask application"
 authors = ["thayer6 <casey.thayer6@gmail.com>"]
 readme = "README.md"
+packages = [{include = "epl_pool"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -11,6 +12,8 @@ flask = "^2.3.2"
 pandas = "^2.0.3"
 lxml = "^4.9.3"
 gunicorn = "^21.2.0"
+
+[tool.poetry.dev-dependencies]
 pytest = "^6.2.4"
 Flask-Testing = "^0.8.1"
 
