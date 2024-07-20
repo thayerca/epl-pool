@@ -1,2 +1,6 @@
-# epl-pool
-EPL Pool App
+# How to run locally
+
+```bash
+poetry install
+flask run
+```
