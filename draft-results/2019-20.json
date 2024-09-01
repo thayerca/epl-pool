@@ -1,0 +1,23 @@
+owner_teams = {
+    "Arsenal": "Casey",
+    "Aston Villa": "Casey",
+    "Bournemouth": "Jason",
+    "Brighton": "CB",
+    "Burnley": "Neo",
+    "Chelsea": "Jason",
+    "Crystal Palace": "Jason",
+    "Everton": "Neo",
+    "Leicester City": "CB",
+    "Liverpool": "CB",
+    "Manchester City": "Neo",
+    "Manchester Utd": "Jason",
+    "Newcastle Utd": "Neo",
+    "Norwich City": "CB",
+    "Sheffield Utd": "Jason",
+    "Southampton": "Casey",
+    "Tottenham": "Casey",
+    "Watford": "CB",
+    "West Ham": "Casey",
+    "Wolves": "Neo",
+}
+
