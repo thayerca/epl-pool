@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: epl-pool
+    env: python
+    buildCommand: poetry install
+    startCommand: poetry run gunicorn wsgi:app
