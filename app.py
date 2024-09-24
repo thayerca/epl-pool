@@ -7,7 +7,6 @@ app = Flask(__name__)
 
 # Configure app with environment variables
 # Defaults set for development, overwritten in production
-app.config["SECRET_KEY"] = os.getenv("SECRET_KEY", "default-secret-key")
 app.config["FLASK_ENV"] = os.getenv("FLASK_ENV", "development")
 
 owner_teams = {
