@@ -1,0 +1,23 @@
+owner_teams = {
+    "Arsenal": "Megan",
+    "Aston Villa": "Neo ⭐",
+    "Brighton": "CB",
+    "Burnley": "CB",
+    "Chelsea": "Megan",
+    "Crystal Palace": "Megan",
+    "Everton": "Casey",
+    "Fulham": "Casey",
+    "Leicester City": "Neo ⭐",
+    "Liverpool": "Casey",
+    "Leeds Utd": "Jason",
+    "Manchester City": "Jason",
+    "Manchester Utd": "CB",
+    "Newcastle Utd": "Neo ⭐",
+    "Sheffield Utd": "Casey",
+    "Southampton": "Jason",
+    "Tottenham": "Neo ⭐",
+    "West Brom": "Jason",
+    "West Ham": "Megan",
+    "Wolves": "CB",
+}
+
